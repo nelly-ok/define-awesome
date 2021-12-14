@@ -3,14 +3,16 @@ import React, { FC } from 'react';
 import { Button } from 'react-native-paper';
 import { StyleSheet, Text, View, TouchableOpacity, Touchable } from 'react-native';
 
-interface Props {
-  navigation: any
-}
+import { RootTabScreenProps } from '../types';
 
-const HomeScreen : FC<Props> = ({navigation}) => {
+// interface Props {
+//   navigation: any
+// }
+
+const HomeScreen  =  ({ navigation }: RootTabScreenProps<'Home'>) => {
 
   const playSolo = () => {
-    navigation.navigate('SoloPlayScreen')
+    navigation.navigate('SoloPlay')
   }
 
   return (
